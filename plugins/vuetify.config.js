@@ -3,6 +3,8 @@ const theme = {
   themes: {
     light: {
       primary: '#FF47D3',
+      primary_alt: '#FF47D3',
+      secondary: '#0A44BF',
     },
   },
 }
