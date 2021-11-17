@@ -103,7 +103,7 @@
               depressed
               to="/account/register"
             >
-              Get Started
+              Register
             </v-btn>
           </v-col>
         </v-row>

@@ -3,8 +3,8 @@
     <v-img
       src="/svgs/happy_couple.svg"
       class="mx-auto"
-      height="200"
-      width="200"
+      height="180"
+      width="180"
     />
     <h4 class="text-h6 font-weight-bold mb-2">
       Welcome to Christian Dating & Social Networking!
