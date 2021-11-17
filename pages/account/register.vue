@@ -4,7 +4,7 @@
     color="transparent"
     flat
     :height="step === 2 ? 'auto' : '100vh'"
-    :class="step === 2 ? 'py-16' : 'py-1'"
+    :class="step === 2 ? 'py-16' : 'py-0'"
   >
     <v-row class="fill-height" justify="center" align="center" no-gutters>
       <v-col cols="11" sm="8" md="6" lg="4">

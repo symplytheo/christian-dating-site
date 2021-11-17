@@ -4,10 +4,9 @@
     app
     color="white"
     right
-    :width="$vuetify.breakpoint.xs ? '100vh' : 250"
+    :width="$vuetify.breakpoint.xs ? '100vw' : 250"
     temporary
     hide-overlay
-    height="100vh"
   >
     <div class="text-right ma-3">
       <v-btn icon large @click="drawer = false">
@@ -32,8 +31,15 @@
     </v-list>
 
     <template v-if="items.at(-1).isLast" #append>
-      <div class="pb-10 px-3">
-        <v-btn block large depressed color="primary" :to="items.at(-1).to">
+      <div class="mb-16 px-3">
+        <v-btn
+          block
+          large
+          depressed
+          color="primary"
+          class="mb-16"
+          :to="items.at(-1).to"
+        >
           {{ items.at(-1).title }}
         </v-btn>
       </div>
