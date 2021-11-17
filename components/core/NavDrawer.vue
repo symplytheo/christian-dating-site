@@ -31,7 +31,7 @@
     </v-list>
 
     <template v-if="items.at(-1).isLast" #append>
-      <div class="py-10 px-3">
+      <div class="pb-10 px-3">
         <v-btn block large depressed color="primary" :to="items.at(-1).to">
           {{ items.at(-1).title }}
         </v-btn>
