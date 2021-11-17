@@ -4,9 +4,10 @@
     app
     color="white"
     right
-    :width="$vuetify.breakpoint.xs ? '100%' : 250"
+    :width="$vuetify.breakpoint.xs ? '100vh' : 250"
     temporary
     hide-overlay
+    height="100vh"
   >
     <div class="text-right ma-3">
       <v-btn icon large @click="drawer = false">
