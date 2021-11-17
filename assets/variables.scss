@@ -14,3 +14,31 @@ $grid-breakpoints: (
 $border-radius-root: 8px;
 
 $btn-text-transform:	none !default;
+
+$text-field-filled-full-width-outlined-slot-min-height: 48px !default;
+
+// global utility classes
+.v-application .primary {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 71, 211, 0.9),
+    rgba(233, 22, 118, 0.9)
+  ) !important;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.position-start {
+  top: 0;
+  left: 0;
+}
+
+.fill-width {
+  width: 100%;
+}
