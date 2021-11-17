@@ -30,20 +30,11 @@
       </template>
     </v-list>
 
-    <template v-if="items.at(-1).isLast" #append>
-      <div class="mb-16 px-3">
-        <v-btn
-          block
-          large
-          depressed
-          color="primary"
-          class="mb-16"
-          :to="items.at(-1).to"
-        >
-          {{ items.at(-1).title }}
-        </v-btn>
-      </div>
-    </template>
+    <div v-if="items.at(-1).isLast" class="mt-16 px-3">
+      <v-btn block large depressed color="primary" :to="items.at(-1).to">
+        {{ items.at(-1).title }}
+      </v-btn>
+    </div>
   </v-navigation-drawer>
 </template>
 
