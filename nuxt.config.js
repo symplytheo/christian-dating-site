@@ -1,8 +1,8 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - christian-dating-site',
-    title: 'christian-dating-site',
+    titleTemplate: '%s - Christian Dating Site',
+    title: 'Welcome',
     htmlAttrs: {
       lang: 'en',
     },
