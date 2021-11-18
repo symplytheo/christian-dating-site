@@ -1,5 +1,5 @@
 <template>
-  <div>Support</div>
+  <div class="pa-10">Support</div>
 </template>
 
 <script>
