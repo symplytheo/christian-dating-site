@@ -30,7 +30,7 @@
       </template>
     </v-list>
 
-    <div v-if="items.at(-1).isLast" class="mt-16 px-3">
+    <div v-if="items.at(-1).isLast" class="mt-10 px-3">
       <v-btn block large depressed color="primary" :to="items.at(-1).to">
         {{ items.at(-1).title }}
       </v-btn>
