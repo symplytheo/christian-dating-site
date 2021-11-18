@@ -91,23 +91,23 @@
 export default {
   data: () => ({
     services: [
-      { title: 'Dating', href: '' },
-      { title: 'Corporate Events', href: '' },
-      { title: 'Local Meetups', href: '' },
+      { title: 'Dating', href: '/services#dating' },
+      { title: 'Corporate Events', href: '/services#corporate-events' },
+      { title: 'Local Meetups', href: '/services#local-meetups' },
     ],
     about: [
-      { title: 'What We Are', href: '' },
-      { title: 'What We Believe', href: '' },
+      { title: 'What We Are', href: '/about#what-we-are' },
+      { title: 'What We Believe', href: '/about#what-we-believe' },
     ],
     legal: [
-      { title: 'Privacy Policy', href: '' },
-      { title: 'Terms & Conditions', href: '' },
-      { title: 'Cookie Policy', href: '' },
+      { title: 'Privacy Policy', href: '/legal#privacy-policy' },
+      { title: 'Terms & Conditions', href: '/legal#terms-and-conditions' },
+      { title: 'Cookie Policy', href: '/legal#cookie-policy' },
     ],
     support: [
-      { title: 'FAQs', href: '' },
-      { title: 'Safety Advice', href: '' },
-      { title: 'Contact us', href: '' },
+      { title: 'FAQs', href: '/faqs' },
+      { title: 'Safety Advice', href: '/safety-advice' },
+      { title: 'Contact us', href: '/contact' },
     ],
   }),
 }
