@@ -10,7 +10,7 @@
       @toggle-drawer="drawer = !drawer"
     />
 
-    <v-main>
+    <v-main class="grey lighten-3">
       <v-container fluid class="pa-0 ma-0">
         <nuxt />
       </v-container>
