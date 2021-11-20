@@ -7,8 +7,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - Christian Dating Site',
-    title: 'Welcome',
+    titleTemplate: '%s - Christian Dating and Social Networking',
+    title: 'Building Relationships, Building People',
     htmlAttrs: {
       lang: 'en',
     },

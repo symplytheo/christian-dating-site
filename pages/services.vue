@@ -1,66 +1,72 @@
 <template>
   <v-container class="rounded my-10">
-    <v-card flat class="pa-5 text-center">
-      <h2 class="text-h5 text-md-h4 font-weight-black mb-5">Our Services</h2>
+    <v-card flat class="pa-5">
+      <h2 class="text-h5 text-md-h4 font-weight-black mb-5 text-center">
+        Our Services
+      </h2>
 
       <div id="dating">
-        <h4 class="text-h6 text-md-h5 font-weight-bold mb-2">Dating</h4>
+        <h4 class="text-h6 text-md-h5 font-weight-bold mb-2 text-center">
+          Dating
+        </h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
-          elementum sit viverra nisl id. Parturient nulla facilisis proin
-          imperdiet. Elit, vestibulum, eu ullamcorper nullam eget pellentesque
-          quis habitant bibendum. Sed nunc dolor at justo vulputate tellus
-          facilisis. Sagittis proin lobortis imperdiet cursus. At est viverra id
-          consequat viverra quis urna. Platea auctor tellus placerat pretium
-          sit. Aliquam faucibus odio malesuada non a. Posuere proin commodo
-          accumsan, convallis integer quis lectus cras diam. Amet bibendum
-          blandit varius sit ut phasellus ultricies sed amet. Purus blandit
-          tellus scelerisque lorem augue enim fermentum turpis condimentum.
-          Dictum nulla pretium gravida pulvinar at. In metus, a pellentesque
-          neque elementum scelerisque commodo tristique. Sit egestas maecenas
-          tortor vitae, et pellentesque..
+          Our core service is with relation to adult dating whereby we provide
+          the platform for adult Christian singles to communicate online and
+          meet other adult singles for dating and relationship. Online dating is
+          a great way to find and connect with other single Christians that you
+          might otherwise never cross paths with, thereby increasing your
+          chances of finding that special someone. Check out our
+          <nuxt-link to=""> Dating page</nuxt-link>.
         </p>
       </div>
 
-      <div id="corporate-events" class="my-10">
-        <h4 class="text-h6 text-md-h5 font-weight-bold mb-2">
+      <div id="meetups" class="mt-10">
+        <h4 class="text-h6 text-md-h5 font-weight-bold mb-2 text-center">
+          Meetups
+        </h4>
+        <p>
+          Meetups are events by members for members. Here, we offer a platform
+          for registered users to organise local, usually face-to-face, events
+          or activities for other members to attend. Meetups are group
+          activities which may include activities such as walks, climbing,
+          bowling, cinemas, theatres, tours, meals, skills sharing etc. All
+          meetup events are screened and pre-approved by our Admin to ensure the
+          safety of our members. Meetups could provide a safe environment for
+          you to meet face-to-face for the first time with someone whom you have
+          met online and would like to explore things further with, but still
+          want to play it safe. They can also help you and someone you are
+          building a relationship with to bond and to enjoy each other’s company
+          in a social setting. Check out our
+          <nuxt-link to="">Meetups page</nuxt-link>.
+        </p>
+      </div>
+
+      <div id="corporate-events" class="mt-10">
+        <h4 class="text-h6 text-md-h5 font-weight-bold mb-2 text-center">
           Corporate Events
         </h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
-          elementum sit viverra nisl id. Parturient nulla facilisis proin
-          imperdiet. Elit, vestibulum, eu ullamcorper nullam eget pellentesque
-          quis habitant bibendum. Sed nunc dolor at justo vulputate tellus
-          facilisis. Sagittis proin lobortis imperdiet cursus. At est viverra id
-          consequat viverra quis urna. Platea auctor tellus placerat pretium
-          sit. Aliquam faucibus odio malesuada non a. Posuere proin commodo
-          accumsan, convallis integer quis lectus cras diam. Amet bibendum
-          blandit varius sit ut phasellus ultricies sed amet. Purus blandit
-          tellus scelerisque lorem augue enim fermentum turpis condimentum.
-          Dictum nulla pretium gravida pulvinar at. In metus, a pellentesque
-          neque elementum scelerisque commodo tristique. Sit egestas maecenas
-          tortor vitae, et pellentesque..
+          We also organise offline events for our members to give people a
+          chance to meet face to face in a safe and comfortable environment. Our
+          events cover a range of themes such as seminars, conferences,
+          retreats, get-aways, music festivals, films, theatres, comedy nights
+          etc. The advantage of attending an event is that you get to mix and
+          mingle with lots of other single Christians. And if you spark or vibe
+          with someone, you can simply exchange details and arrange to meet up
+          again on your own terms. We have heard many wonderful stories from
+          people who have met at an event and gone on to form a relationship.
+          Check out our <nuxt-link to="">Events page</nuxt-link>.
         </p>
       </div>
 
-      <div id="local-meetups">
-        <h4 class="text-h6 text-md-h5 font-weight-bold mb-2">Local Meetups</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
-          elementum sit viverra nisl id. Parturient nulla facilisis proin
-          imperdiet. Elit, vestibulum, eu ullamcorper nullam eget pellentesque
-          quis habitant bibendum. Sed nunc dolor at justo vulputate tellus
-          facilisis. Sagittis proin lobortis imperdiet cursus. At est viverra id
-          consequat viverra quis urna. Platea auctor tellus placerat pretium
-          sit. Aliquam faucibus odio malesuada non a. Posuere proin commodo
-          accumsan, convallis integer quis lectus cras diam. Amet bibendum
-          blandit varius sit ut phasellus ultricies sed amet. Purus blandit
-          tellus scelerisque lorem augue enim fermentum turpis condimentum.
-          Dictum nulla pretium gravida pulvinar at. In metus, a pellentesque
-          neque elementum scelerisque commodo tristique. Sit egestas maecenas
-          tortor vitae, et pellentesque..
-        </p>
-      </div>
+      <p>
+        For more details about our services and how they are operated, please
+        consult our
+        <nuxt-link to="/legal#terms-and-conditions"
+          >Terms and Conditions</nuxt-link
+        >
+        .
+      </p>
     </v-card>
   </v-container>
 </template>

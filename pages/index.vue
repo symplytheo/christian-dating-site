@@ -1,27 +1,49 @@
 <template>
   <div>
-    <v-img src="/bg/2.jpg" min-height="500" class="fill-width">
-      <v-sheet color="rgba(233, 22, 118, 0.3)" class="pa-10" height="100%" dark>
-        <v-row align="center" class="fill-height">
-          <v-col cols="11" sm="7" md="5" lg="4">
-            <h2 class="text-h4 text-sm-h3 font-weight-black mb-3">
-              Building Relationships Building People
-            </h2>
-            <p class="subtitle-1">
-              Join the christian dating and social networking and get the best
-              match just for you
-            </p>
-            <v-btn color="primary" block large depressed to="/account/register">
-              Get Started
-            </v-btn>
-          </v-col>
-        </v-row>
-      </v-sheet>
+    <v-carousel
+      hide-delimiter-background
+      delimiter-icon="mdi-minus"
+      cycle
+      height="550"
+      :show-arrows="!isMobile"
+      show-arrows-on-hover
+    >
+      <v-carousel-item v-for="v in 5" :key="v">
+        <v-img :src="`/slides/${v}.jpg`" height="100%" class="fill-width">
+          <v-sheet
+            color="rgba(233, 22, 118, 0.3)"
+            class="pa-10"
+            height="100%"
+            dark
+          >
+            <v-row align="center" class="fill-height">
+              <v-col cols="11" sm="7" md="5" lg="4">
+                <h2 class="text-h4 text-sm-h3 font-weight-black mb-3">
+                  Building Relationships Building People
+                </h2>
+                <p class="subtitle-1">
+                  Join the christian dating and social networking and get the
+                  best match just for you
+                </p>
+                <v-btn
+                  color="primary"
+                  block
+                  large
+                  depressed
+                  to="/account/register"
+                >
+                  Get Started
+                </v-btn>
+              </v-col>
+            </v-row>
+          </v-sheet>
 
-      <template #placeholder>
-        <image-placeholder size="75" />
-      </template>
-    </v-img>
+          <template #placeholder>
+            <image-placeholder size="75" />
+          </template>
+        </v-img>
+      </v-carousel-item>
+    </v-carousel>
 
     <div class="white">
       <v-container class="py-10">
@@ -112,11 +134,15 @@
             <v-card height="250" color="primary" flat class="relative">
               <v-img
                 :src="item.image"
-                class="absolute rounded grey lighten-2"
+                class="absolute rounded grey lighten-1"
                 :class="m % 2 === 0 ? 'top-left-20' : 'bottom-right-20'"
                 width="100%"
                 height="100%"
-              />
+              >
+                <template #placeholder>
+                  <image-placeholder />
+                </template>
+              </v-img>
             </v-card>
           </v-col>
           <v-col
@@ -136,7 +162,7 @@
       </v-container>
     </div>
 
-    <v-img src="/bg/3.jpg" height="350" class="fill-width">
+    <v-img src="/bg/2.jpg" height="350" class="fill-width">
       <v-sheet
         color="rgba(233, 22, 118, 0.9)"
         class="py-10 text-center"
