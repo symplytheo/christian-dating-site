@@ -20,6 +20,10 @@ $text-field-filled-full-width-outlined-slot-min-height: 48px !default;
 $carousel-dot-margin:	0px 4px !default;
 
 // global utility classes
+html {
+  scroll-behavior: smooth;
+}
+
 .v-application .primary {
   background-image: linear-gradient(
     to right,
@@ -43,4 +47,8 @@ $carousel-dot-margin:	0px 4px !default;
 
 .fill-width {
   width: 100%;
+}
+
+.transition {
+  transition: all 0.35s ease;
 }
