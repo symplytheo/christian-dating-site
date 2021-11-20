@@ -93,7 +93,7 @@ export default {
     services: [
       { title: 'Dating', href: '/services#dating' },
       { title: 'Corporate Events', href: '/services#corporate-events' },
-      { title: 'Local Meetups', href: '/services#local-meetups' },
+      { title: 'Local Meetups', href: '/services#meetups' },
     ],
     about: [
       { title: 'What We Are', href: '/about-us#what-we-are' },
