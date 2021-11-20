@@ -96,8 +96,8 @@ export default {
       { title: 'Local Meetups', href: '/services#local-meetups' },
     ],
     about: [
-      { title: 'What We Are', href: '/about#what-we-are' },
-      { title: 'What We Believe', href: '/about#what-we-believe' },
+      { title: 'What We Are', href: '/about-us#what-we-are' },
+      { title: 'What We Believe', href: '/about-us#what-we-believe' },
     ],
     legal: [
       { title: 'Privacy Policy', href: '/legal#privacy-policy' },
@@ -107,7 +107,7 @@ export default {
     support: [
       { title: 'FAQs', href: '/faqs' },
       { title: 'Safety Advice', href: '/safety-advice' },
-      { title: 'Contact us', href: '/contact' },
+      { title: 'Contact us', href: '/contact-us' },
     ],
   }),
 }
