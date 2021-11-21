@@ -198,7 +198,7 @@
     </v-img>
 
     <!-- testimonials -->
-    <div class="white py-5">
+    <div class="py-5 transparent">
       <v-container>
         <h4 class="secondary--text text-h5 font-weight-black text-center mb-3">
           Testimonials
