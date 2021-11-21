@@ -1,72 +1,73 @@
 <template>
   <v-container class="rounded my-10">
-    <v-card flat class="pa-5 text-center">
-      <h2 class="text-h5 text-md-h4 font-weight-black mb-5">Legal</h2>
+    <v-card flat class="pa-5">
+      <h2 class="text-h5 text-md-h4 font-weight-black mb-5 text-center">
+        Legal
+      </h2>
 
       <div id="privacy-policy">
-        <h4 class="text-h6 text-md-h5 font-weight-bold mb-2">Privacy Policy</h4>
+        <h4 class="text-h6 text-md-h5 font-weight-bold mb-2 text-center">
+          Privacy Policy
+        </h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
-          elementum sit viverra nisl id. Parturient nulla facilisis proin
-          imperdiet. Elit, vestibulum, eu ullamcorper nullam eget pellentesque
-          quis habitant bibendum. Sed nunc dolor at justo vulputate tellus
-          facilisis. Sagittis proin lobortis imperdiet cursus. At est viverra id
-          consequat viverra quis urna. Platea auctor tellus placerat pretium
-          sit. Aliquam faucibus odio malesuada non a. Posuere proin commodo
-          accumsan, convallis integer quis lectus cras diam. Amet bibendum
-          blandit varius sit ut phasellus ultricies sed amet. Purus blandit
-          tellus scelerisque lorem augue enim fermentum turpis condimentum.
-          Dictum nulla pretium gravida pulvinar at. In metus, a pellentesque
-          neque elementum scelerisque commodo tristique. Sit egestas maecenas
-          tortor vitae, et pellentesque..
+          At Christian Dating and Social Networking we take data privacy
+          seriously. This Privacy Policy explains the steps we take to ensure
+          information about you is kept secure and confidential. We will take
+          all steps reasonably necessary to ensure that your data is treated
+          securely and in accordance with this privacy policy.
+          <a @click="privacy = true">Read more</a>
         </p>
       </div>
 
       <div id="terms-and-conditions" class="my-10">
-        <h4 class="text-h6 text-md-h5 font-weight-bold mb-2">
+        <h4 class="text-h6 text-md-h5 font-weight-bold mb-2 text-center">
           Terms and Conditions
         </h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
-          elementum sit viverra nisl id. Parturient nulla facilisis proin
-          imperdiet. Elit, vestibulum, eu ullamcorper nullam eget pellentesque
-          quis habitant bibendum. Sed nunc dolor at justo vulputate tellus
-          facilisis. Sagittis proin lobortis imperdiet cursus. At est viverra id
-          consequat viverra quis urna. Platea auctor tellus placerat pretium
-          sit. Aliquam faucibus odio malesuada non a. Posuere proin commodo
-          accumsan, convallis integer quis lectus cras diam. Amet bibendum
-          blandit varius sit ut phasellus ultricies sed amet. Purus blandit
-          tellus scelerisque lorem augue enim fermentum turpis condimentum.
-          Dictum nulla pretium gravida pulvinar at. In metus, a pellentesque
-          neque elementum scelerisque commodo tristique. Sit egestas maecenas
-          tortor vitae, et pellentesque..
+          These Terms of Use constitute a legally binding Agreement between
+          Christian Dating and Social Networking (“us”, “we”, “our”) and our
+          customer ("you", “your”) concerning your use of our website (the
+          “Website”, “Site”) and the services available through the Website (the
+          “Service”) whether through a computer or a mobile device.
+          <a @click="terms = true">Read more</a>
         </p>
       </div>
 
       <div id="cookie-policy">
-        <h4 class="text-h6 text-md-h5 font-weight-bold mb-2">Cookie Policy</h4>
+        <h4 class="text-h6 text-md-h5 font-weight-bold mb-2 text-center">
+          Cookie Policy
+        </h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
-          elementum sit viverra nisl id. Parturient nulla facilisis proin
-          imperdiet. Elit, vestibulum, eu ullamcorper nullam eget pellentesque
-          quis habitant bibendum. Sed nunc dolor at justo vulputate tellus
-          facilisis. Sagittis proin lobortis imperdiet cursus. At est viverra id
-          consequat viverra quis urna. Platea auctor tellus placerat pretium
-          sit. Aliquam faucibus odio malesuada non a. Posuere proin commodo
-          accumsan, convallis integer quis lectus cras diam. Amet bibendum
-          blandit varius sit ut phasellus ultricies sed amet. Purus blandit
-          tellus scelerisque lorem augue enim fermentum turpis condimentum.
-          Dictum nulla pretium gravida pulvinar at. In metus, a pellentesque
-          neque elementum scelerisque commodo tristique. Sit egestas maecenas
-          tortor vitae, et pellentesque..
+          In some cases, we may use cookies and related technologies to collect
+          personal information, or to collect information that becomes personal
+          information if we combine it with other information. This Cookie
+          Policy supplements the information contained in our
+          <nuxt-link to="#privacy-policy">Privacy Policy</nuxt-link> by
+          explaining how we and our business partners and service providers use
+          cookies and related technologies in the course of managing and
+          providing our online services and our communications to you. It
+          explains what these technologies are and why we use them, as well as
+          your rights to control our use of them.
+          <a @click="cookie = true">Read more</a>
         </p>
       </div>
     </v-card>
+
+    <!-- modals -->
+    <dialogs-legal-privacy-policy v-model="privacy" />
+    <dialogs-legal-terms-conditions v-model="terms" />
+    <dialogs-legal-cookie-policy v-model="cookie" />
+    <!--  -->
   </v-container>
 </template>
 
 <script>
 export default {
+  data: () => ({
+    privacy: false,
+    terms: false,
+    cookie: false,
+  }),
   head() {
     return { title: 'Legal' }
   },
