@@ -89,7 +89,8 @@ export default {
   methods: {
     emailValidation,
     handleLogin() {
-      // console.log(this.form)
+      this.$store.commit('user/setUser', { name: 'Jane Doe' })
+      this.$router.push('/')
     },
   },
 }
