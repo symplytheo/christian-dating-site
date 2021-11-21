@@ -1,7 +1,7 @@
 <template>
   <v-container class="py-10">
     <v-row justify="center" align="center" class="fill-height">
-      <v-col cols="12" sm="10" md="6" lg="5">
+      <v-col cols="12" sm="11" md="10">
         <v-card flat class="pa-5">
           <h2 class="text-center font-weight-black text-h5 mb-5">Contact Us</h2>
           <div>

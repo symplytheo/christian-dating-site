@@ -12,7 +12,7 @@ const theme = {
 const breakpoint = {
   mobileBreakpoint: 'sm',
   thresholds: {
-    xs: 480,
+    xs: 576,
     sm: 768,
     md: 1024,
     lg: 1200,

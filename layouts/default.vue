@@ -1,11 +1,10 @@
 <template>
   <v-app>
-    <core-nav-drawer
-      v-model="drawer"
-      :items="isLoggedIn ? loggedNav : navLinks"
-    />
+    <core-nav-drawer v-model="drawer" :items="navLinks" />
 
     <core-app-bar
+      :extended="isLoggedIn"
+      :tabs="tabs"
       :items="isLoggedIn ? loggedNav : navLinks"
       @toggle-drawer="drawer = !drawer"
     />
@@ -33,6 +32,12 @@ export default {
     },
     navLinks() {
       return this.$store.state.navLinks
+    },
+    loggedNav() {
+      return this.$store.state.loggedNav
+    },
+    tabs() {
+      return this.$store.state.tabs
     },
   },
 }

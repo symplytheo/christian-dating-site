@@ -1,5 +1,5 @@
 <template>
-  <v-footer padless>
+  <v-footer padless color="white">
     <v-container fluid class="pt-10">
       <v-row justify="space-between">
         <v-col cols="12" md="4" lg="3">
@@ -11,7 +11,7 @@
           <v-row dense>
             <v-col cols="6" md="3">
               <div class="subtitle-1 font-weight-bold">Our Services</div>
-              <v-list dense color="transparent">
+              <v-list flat dense color="transparent">
                 <v-list-item
                   v-for="item in services"
                   :key="item.title"
@@ -27,7 +27,7 @@
             </v-col>
             <v-col cols="6" md="3">
               <div class="subtitle-1 font-weight-bold">About Us</div>
-              <v-list dense color="transparent">
+              <v-list flat dense color="transparent">
                 <v-list-item
                   v-for="item in about"
                   :key="item.title"
@@ -43,7 +43,7 @@
             </v-col>
             <v-col cols="6" md="3">
               <div class="subtitle-1 font-weight-bold">Legal</div>
-              <v-list dense color="transparent">
+              <v-list dense flat color="transparent">
                 <v-list-item
                   v-for="item in legal"
                   :key="item.title"
@@ -59,7 +59,7 @@
             </v-col>
             <v-col cols="6" md="3">
               <div class="subtitle-1 font-weight-bold">Support</div>
-              <v-list dense color="transparent">
+              <v-list flat dense color="transparent">
                 <v-list-item
                   v-for="item in support"
                   :key="item.title"
@@ -80,8 +80,13 @@
     <v-container fluid class="px-0">
       <v-divider />
       <div class="text-center pb-3 pt-5">
-        Copyright
-        {{ new Date().getFullYear() }}. All rights reserved
+        &copy;
+        {{ new Date().getFullYear() }}
+        <nuxt-link to="/">
+          <abbr title="Christian Dating &amp; Social Networking"
+            >CDSN</abbr
+          > </nuxt-link
+        >. AllRights Reserved
       </div>
     </v-container>
   </v-footer>
