@@ -5,97 +5,110 @@
       <core-logo />
     </nuxt-link>
 
-    <v-spacer />
-
     <template v-if="isLoggedIn">
-      <div class="d-none d-md-flex ml-5">
-        <v-text-field
-          solo
-          solo-inverted
-          dense
-          hide-details
-          placeholder="Search..."
-          append-icon="mdi-magnify"
-          style="max-width: 400px"
-        />
-      </div>
+      <v-text-field
+        filled
+        dense
+        flat
+        hide-details
+        class="mx-1 d-none d-sm-block"
+        placeholder="Search..."
+        append-icon="mdi-magnify"
+        style="max-width: 400px"
+      />
 
-      <div class="d-none d-md-flex">
+      <v-spacer />
+
+      <template v-if="isMobile">
+        <v-btn icon color="secondary">
+          <v-icon size="30">mdi-magnify</v-icon>
+        </v-btn>
+
+        <v-badge offset-x="20" offset-y="20" bordered dot>
+          <v-btn to="/account/inbox" icon color="secondary" class="mx-1">
+            <v-icon size="30">mdi-chat-processing-outline</v-icon>
+          </v-btn>
+        </v-badge>
+      </template>
+
+      <template v-else>
         <template v-for="item in items">
           <v-btn
-            v-if="item.to"
+            v-if="!item.hasBadge"
             :key="item.title"
             text
-            color="primary"
+            color="secondary"
             :to="item.to"
-            active-class="secondary--text"
+            exact
+            active-class="primary--text"
           >
             {{ item.title }}
           </v-btn>
-          <v-btn
+          <v-badge
             v-else
             :key="item.title"
-            text
-            color="primary"
-            active-class="secondary--text"
-            @click="item.action"
+            offset-x="19"
+            offset-y="18"
+            bordered
+            dot
           >
-            {{ item.title }}
-          </v-btn>
-        </template>
-      </div>
-      <v-menu open-on-hover offset-y max-width="200">
-        <template #activator="{ on, attrs }">
-          <v-avatar color="primary" class="mx-2" v-bind="attrs" v-on="on">
-            <img v-if="user.avatar" :src="user.avatar" />
-            <span
-              v-else
-              class="text-h6 text-uppercase font-weight-bold white--text"
+            <v-btn
+              text
+              color="secondary"
+              :to="item.to"
+              exact
+              active-class="primary--text"
             >
-              {{ getInitials(user.name) }}
-            </span>
-          </v-avatar>
+              {{ item.title }}
+            </v-btn>
+          </v-badge>
         </template>
-        <v-list dense class="py-0">
-          <v-list-item two-line>
-            <v-list-item-content>
-              <v-list-item-title class="text-capitalize">
-                {{ user.name }}
-              </v-list-item-title>
-              <v-list-item-subtitle>
-                {{ user.email }}
-              </v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-          <v-divider />
-          <v-list-item
-            v-for="(item, n) in userMenu"
-            :key="n"
-            active-class="primary--text"
-            :to="item.href"
-            style="border-bottom: 1px solid #eee"
+      </template>
+
+      <v-menu offset-y>
+        <template #activator="{ on, attrs }">
+          <v-avatar
+            v-if="isMobile"
+            color="primary"
+            class="justify-center"
+            v-bind="attrs"
+            v-on="on"
           >
-            <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-icon>
+            <span class="white--text text-h6 font-weight-black">TH</span>
+          </v-avatar>
+          <v-list-item
+            v-else
+            class="px-1"
+            style="max-width: 180px"
+            v-bind="attrs"
+            v-on="on"
+          >
+            <v-list-item-avatar color="primary" class="mr-1 justify-center">
+              <span class="white--text text-h6 font-weight-black">TH</span>
+            </v-list-item-avatar>
             <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
+              <v-list-item-title>Theophilus</v-list-item-title>
             </v-list-item-content>
+            <v-list-item-icon>
+              <v-icon color="black">mdi-menu-down</v-icon>
+            </v-list-item-icon>
           </v-list-item>
-          <v-list-item @click="logOut">
-            <v-list-item-icon>
-              <v-icon>mdi-logout</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title>Logout</v-list-item-title>
-            </v-list-item-content>
+        </template>
+
+        <v-list dense>
+          <v-list-item v-for="(item, i) in userMenu" :key="i">
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
 
-      <v-btn depressed color="primary">Premium</v-btn>
+      <v-btn class="hidden-sm-and-down" depressed color="primary">
+        Premium
+      </v-btn>
     </template>
+
     <template v-else>
+      <v-spacer />
       <div class="d-none d-md-flex align-center">
         <template v-for="(item, n) in items">
           <v-btn
@@ -113,13 +126,26 @@
           </v-btn>
         </template>
       </div>
+
+      <v-app-bar-nav-icon
+        color="primary"
+        class="d-inline-flex d-md-none"
+        @click.stop="$emit('toggle-drawer')"
+      />
     </template>
 
-    <v-app-bar-nav-icon
-      color="primary"
-      class="d-inline-flex d-md-none"
-      @click.stop="$emit('toggle-drawer')"
-    />
+    <template v-if="extended" #extension>
+      <v-tabs color="secondary" optional align-with-title grow center-active>
+        <v-tab
+          v-for="tab in tabs"
+          :key="tab.title"
+          :to="tab.to"
+          class="text-capitalize"
+        >
+          {{ tab.title }}
+        </v-tab>
+      </v-tabs>
+    </template>
   </v-app-bar>
 </template>
 
@@ -128,7 +154,9 @@ import { getInitials } from '~/assets/utils'
 
 export default {
   props: {
+    extended: { type: Boolean, default: false },
     items: { type: Array, default: () => [] },
+    tabs: { type: Array, default: () => [] },
   },
   computed: {
     isLoggedIn() {
@@ -139,6 +167,9 @@ export default {
     },
     userMenu() {
       return this.$store.state.user.userMenu
+    },
+    isMobile() {
+      return this.$vuetify.breakpoint.mobile
     },
   },
   methods: {
