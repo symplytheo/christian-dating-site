@@ -4,7 +4,7 @@ export const state = () => ({
     { title: 'About Us', to: '/about-us' },
     { title: 'Our Services', to: '/services' },
     { title: 'Legal', to: '/legal' },
-    { title: 'Support', to: '/support' },
+    { title: 'Support', to: '/contact-us' },
     { title: 'Login', to: '/account/login', isLast: true },
   ],
   loggedNav: [
@@ -89,4 +89,11 @@ export const state = () => ({
       likes: 500,
     },
   ],
+  cookiePermission: true,
 })
+
+export const mutations = {
+  setCookiePermission(state, val) {
+    state.cookiePermission = val
+  },
+}
