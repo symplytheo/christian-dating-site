@@ -73,6 +73,7 @@
 </template>
 
 <script>
+import Cookies from 'js-cookie'
 import { emailValidation } from '~/assets/utils'
 
 export default {
@@ -89,7 +90,11 @@ export default {
   methods: {
     emailValidation,
     handleLogin() {
-      this.$store.commit('user/setUser', { name: 'Jane Doe' })
+      Cookies.set('CDSNtoken', 'cdsnuser001')
+      this.$store.commit('user/setUser', {
+        name: 'Jane Doe',
+        email: 'janedoe@gmail.com',
+      })
       this.$router.push('/')
     },
   },
