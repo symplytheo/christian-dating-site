@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app absolute color="white" elevation="1" height="80">
+  <v-app-bar app absolute color="white" flat height="80">
     <!-- Logo -->
     <nuxt-link to="/">
       <core-logo />
@@ -74,7 +74,9 @@
             v-bind="attrs"
             v-on="on"
           >
-            <span class="white--text text-h6 font-weight-black">TH</span>
+            <span class="white--text text-h6 font-weight-black">
+              {{ getInitials(user.name) }}
+            </span>
           </v-avatar>
           <v-list-item
             v-else
@@ -84,10 +86,12 @@
             v-on="on"
           >
             <v-list-item-avatar color="primary" class="mr-1 justify-center">
-              <span class="white--text text-h6 font-weight-black">TH</span>
+              <span class="white--text text-h6 font-weight-black">
+                {{ getInitials(user.name) }}
+              </span>
             </v-list-item-avatar>
             <v-list-item-content>
-              <v-list-item-title>Theophilus</v-list-item-title>
+              <v-list-item-title>{{ user.name }}</v-list-item-title>
             </v-list-item-content>
             <v-list-item-icon>
               <v-icon color="black">mdi-menu-down</v-icon>
@@ -98,6 +102,9 @@
         <v-list dense>
           <v-list-item v-for="(item, i) in userMenu" :key="i">
             <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item>
+          <v-list-item link @click="logOut">
+            <v-list-item-title>Logout</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
