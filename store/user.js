@@ -1,3 +1,5 @@
+import Cookies from 'js-cookie'
+
 export const state = () => ({
   profile: null,
   authenticated: false,
@@ -18,5 +20,13 @@ export const mutations = {
   setUser(state, user) {
     state.profile = user || null
     state.authenticated = !!user
+  },
+}
+
+export const actions = {
+  logOut({ commit }) {
+    Cookies.remove('CDSNtoken')
+    commit('setUser', null)
+    this.$router.go(0)
   },
 }

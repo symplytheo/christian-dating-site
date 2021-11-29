@@ -9,7 +9,12 @@
       show-arrows-on-hover
     >
       <v-carousel-item v-for="v in 5" :key="v">
-        <v-img :src="`/slides/${v}.jpg`" height="100%" class="fill-width">
+        <v-img
+          :src="`/slides/${v}.${v === 1 ? 'jpg' : 'jpeg'}`"
+          height="100%"
+          width="100%"
+          :position="v < 5 ? 'center' : 'top'"
+        >
           <v-sheet
             color="rgba(233, 22, 118, 0.3)"
             class="pa-10"

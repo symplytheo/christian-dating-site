@@ -9,11 +9,14 @@
     </v-main>
 
     <core-footer />
+
+    <dialogs-cookie-permission />
   </v-app>
 </template>
 
 <script>
 export default {
+  middleware: 'auth',
   computed: {
     tabs() {
       return this.$store.state.tabs
@@ -27,9 +30,6 @@ export default {
     loggedNav() {
       return this.$store.state.loggedNav
     },
-  },
-  mounted() {
-    this.$store.commit('user/setUser', { name: 'Jane Doe' })
   },
 }
 </script>
