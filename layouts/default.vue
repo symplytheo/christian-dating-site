@@ -16,6 +16,8 @@
     </v-main>
 
     <core-footer />
+
+    <dialogs-cookie-permission />
   </v-app>
 </template>
 
