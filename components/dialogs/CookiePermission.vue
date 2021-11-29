@@ -6,20 +6,28 @@
     persistent
     content-class="dialog-cookie"
   >
-    <v-card tile flat width="100%" class="border-0">
-      <v-card-title class="font-weight-bold subtitle-1 px-5">
-        Cookie Permission
-      </v-card-title>
-      <v-card-text class="text--primary">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptas
-        nisi ut impedit doloremque aperiam delectus tempore sit perferendis
-        necessitatibus, voluptatibus fugiat. Vel sed nulla quod ipsam repellat
-        dolor eum.
-      </v-card-text>
-      <v-card-actions class="pt-0">
-        <v-spacer />
-        <v-btn depressed color="primary" @click="close">OK</v-btn>
-      </v-card-actions>
+    <v-card color="primary" dark tile flat width="100%" class="border-0">
+      <div class="pa-5">
+        <v-row align="center">
+          <v-col cols="12" md="8" lg="9">
+            We use cookies to provide our services and for analytics and
+            marketing. To find out more about our use of cookies, please see our
+            <nuxt-link to="/legal#privacy-policy" class="secondary--text"
+              >Privacy Policy</nuxt-link
+            >
+            and
+            <nuxt-link to="/legal#cookie-policy" class="secondary--text"
+              >Cookie Policy</nuxt-link
+            >. By continuing to browse our website, you agree to our use of
+            cookies.
+          </v-col>
+          <v-col cols="12" md="4" lg="3">
+            <v-btn depressed large block color="secondary" @click="close">
+              I understand
+            </v-btn>
+          </v-col>
+        </v-row>
+      </div>
     </v-card>
   </v-dialog>
 </template>
