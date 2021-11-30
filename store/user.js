@@ -8,6 +8,7 @@ export const state = () => ({
     { title: 'Bump up', href: '', icon: '' },
     { title: 'Refer a Friend', href: '', icon: '' },
     { title: 'Send Feedback', href: '', icon: '' },
+    { title: 'Change Password', href: '', icon: '' },
   ],
 })
 

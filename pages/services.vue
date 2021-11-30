@@ -16,7 +16,7 @@
           a great way to find and connect with other single Christians that you
           might otherwise never cross paths with, thereby increasing your
           chances of finding that special someone. Check out our
-          <nuxt-link to=""> Dating page</nuxt-link>.
+          <nuxt-link to="/dating"> Dating page</nuxt-link>.
         </p>
       </div>
 
@@ -37,7 +37,7 @@
           want to play it safe. They can also help you and someone you are
           building a relationship with to bond and to enjoy each other’s company
           in a social setting. Check out our
-          <nuxt-link to="">Meetups page</nuxt-link>.
+          <nuxt-link to="/meetups">Meetups page</nuxt-link>.
         </p>
       </div>
 
@@ -55,7 +55,7 @@
           with someone, you can simply exchange details and arrange to meet up
           again on your own terms. We have heard many wonderful stories from
           people who have met at an event and gone on to form a relationship.
-          Check out our <nuxt-link to="">Events page</nuxt-link>.
+          Check out our <nuxt-link to="/events">Events page</nuxt-link>.
         </p>
       </div>
 
@@ -64,8 +64,7 @@
         consult our
         <nuxt-link to="/legal#terms-and-conditions"
           >Terms and Conditions</nuxt-link
-        >
-        .
+        >.
       </p>
     </v-card>
   </v-container>

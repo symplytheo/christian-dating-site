@@ -44,10 +44,10 @@ export default {
   data: () => ({
     tab: null,
     tabs: [
-      { title: 'Upcoming', href: '/meetup' },
-      { title: 'Interested', href: '/meetup/interested' },
-      { title: 'Past', href: '/meetup/past' },
-      { title: 'My Meetups', href: '/meetup/me' },
+      { title: 'Upcoming', href: '/meetups' },
+      { title: 'Interested', href: '/meetups/interested' },
+      { title: 'Past', href: '/meetups/past' },
+      { title: 'My Meetups', href: '/meetups/me' },
     ],
   }),
   computed: {
