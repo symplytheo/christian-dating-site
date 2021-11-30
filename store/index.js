@@ -14,8 +14,8 @@ export const state = () => ({
   tabs: [
     { title: 'New', to: '/dating' },
     { title: 'Match', to: '/dating/match' },
-    { title: 'Meetup', to: '/meetup' },
-    { title: 'Corporate Events', to: '/corporate-events' },
+    { title: 'Meetup', to: '/meetups' },
+    { title: 'Corporate Events', to: '/events' },
     { title: 'Love Pod', to: '/love-pod' },
     { title: 'Love Pop-up', to: '/love-popup' },
   ],

@@ -7,7 +7,7 @@
         </v-btn>
         Privacy Policy
       </v-card-title>
-      <div class="pa-5">
+      <div class="pa-5 pt-0">
         <p class="font-weight-bold">
           Please read this Privacy Policy carefully, together with the
           <nuxt-link to="/legal#terms-and-conditions" @click.native="close">

@@ -7,7 +7,7 @@
         </v-btn>
         Cookie Policy
       </v-card-title>
-      <v-card-text class="text--primary">
+      <div class="pa-5 pt-0">
         <div>
           <h4 class="subtitle-1 font-weight-bold">
             What Are Cookies and Related Technologies
@@ -240,7 +240,7 @@
             >.
           </p>
         </div>
-      </v-card-text>
+      </div>
     </v-card>
   </v-dialog>
 </template>
@@ -267,5 +267,3 @@ export default {
   },
 }
 </script>
-
-<style></style>
