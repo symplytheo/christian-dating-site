@@ -1,10 +1,12 @@
 <template>
   <v-card flat>
-    <v-img :src="meetup.image" height="200" class="grey lighten-4">
-      <template #placeholder>
-        <image-placeholder />
-      </template>
-    </v-img>
+    <nuxt-link class="text-decoration-none" to="/meetups/1">
+      <v-img :src="meetup.image" height="200" class="grey lighten-4 rounded-t">
+        <template #placeholder>
+          <image-placeholder />
+        </template>
+      </v-img>
+    </nuxt-link>
     <v-card-text class="text--primary">
       <div class="secondary--text subtitle-2 text-uppercase">
         {{ meetup.date }}

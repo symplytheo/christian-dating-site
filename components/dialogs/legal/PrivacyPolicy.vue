@@ -563,9 +563,7 @@
               </li>
               <li>
                 For more details, you can read our
-                <nuxt-link
-                  to="/legal#cookie-policy"
-                  @click.native="dialog = false"
+                <nuxt-link to="/legal#cookie-policy" @click.native="close"
                   >Cookie Policy</nuxt-link
                 >.
               </li>
@@ -580,9 +578,7 @@
                 including the way we’ve handled your personal information, you
                 should in the first instance report through our internal
                 complaints procedure by following this link:
-                <nuxt-link
-                  to="/legal#cookie-policy"
-                  @click.native="dialog = false"
+                <nuxt-link to="/legal#cookie-policy" @click.native="close"
                   >Contact Us</nuxt-link
                 >.
               </li>
@@ -621,7 +617,7 @@
       <div class="pa-5 pt-0">
         If you have any questions relating to this Privacy Policy or how we use
         the personal information we have about you, please
-        <nuxt-link to="/legal#cookie-policy" @click.native="dialog = false"
+        <nuxt-link to="/legal#cookie-policy" @click.native="close"
           >contact us</nuxt-link
         >.
       </div>

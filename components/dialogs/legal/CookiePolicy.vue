@@ -224,7 +224,7 @@
           <p>
             If you have any questions or comments about this Cookie Policy,
             please
-            <nuxt-link to="/contact-us" @click.native="dialog = false">
+            <nuxt-link to="/contact-us" @click.native="close">
               contact us</nuxt-link
             >.
           </p>
@@ -232,10 +232,7 @@
           <p>
             For more details about how we process your personal information,
             please review our
-            <nuxt-link
-              to="/legal#privacy-policy"
-              @click.native="dialog = false"
-            >
+            <nuxt-link to="/legal#privacy-policy" @click.native="close">
               Privacy Policy</nuxt-link
             >.
           </p>

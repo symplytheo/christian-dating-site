@@ -7,12 +7,12 @@
 
     <template v-if="isLoggedIn">
       <v-text-field
-        filled
-        dense
+        solo
+        background-color="grey lighten-3"
         flat
         hide-details
         class="mx-1 d-none d-sm-block"
-        placeholder="Search..."
+        placeholder="Search for someone"
         append-icon="mdi-magnify"
         style="max-width: 400px"
       />
