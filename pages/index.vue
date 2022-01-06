@@ -210,9 +210,9 @@
     <!-- testimonials -->
     <div class="py-5 transparent">
       <v-container>
-        <h4 class="secondary--text text-h5 font-weight-black text-center mb-3">
+        <h5 class="secondary--text text-h5 font-weight-black text-center mb-3">
           Testimonials
-        </h4>
+        </h5>
         <v-carousel
           hide-delimiter-background
           show-arrows-on-hover

@@ -3,7 +3,7 @@
     <v-container fluid class="pt-10">
       <v-row justify="space-between">
         <v-col cols="12" md="4" lg="3">
-          <nuxt-link to="/">
+          <nuxt-link to="/" aria-label="Home">
             <core-logo />
           </nuxt-link>
         </v-col>
