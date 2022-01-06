@@ -24,6 +24,11 @@ export default {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500;700;900&display=swap',
       },
+      {
+        rel: 'preload',
+        as: 'font',
+        href: 'https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css',
+      },
     ],
   },
 
