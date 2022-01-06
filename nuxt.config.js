@@ -67,8 +67,8 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     optionsPath: '~/plugins/vuetify.config.js',
+    defaultAssets: { font: false },
     treeShake: true,
-    defaultAssets: false,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
