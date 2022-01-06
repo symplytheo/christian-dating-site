@@ -37,8 +37,10 @@ export default {
         crossorigin: true,
       },
       {
-        rel: 'stylesheet',
+        rel: 'preload',
+        as: 'style',
         href: 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500;700;900&display=swap',
+        onload: 'this.onload=null;this.rel="stylesheet"',
       },
     ],
   },
