@@ -177,7 +177,7 @@
         <v-row align="center" justify="center" class="fill-height">
           <v-col cols="11" sm="8" md="6" lg="5" class="text-center">
             <h2 class="text-h5 text-sm-h4 font-weight-black mb-3">
-              Join the Single’s Network now
+              Join the Singles Network now
             </h2>
             <p class="subtitle-1">
               Lectus a placerat interdum diam porttitor ultrices. Lectus a
