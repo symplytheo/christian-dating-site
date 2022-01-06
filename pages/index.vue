@@ -307,6 +307,12 @@ export default {
       ],
     }
   },
+  head() {
+    return {
+      titleTemplate: '%s',
+      title: 'Christian Dating and Social Networking',
+    }
+  },
   computed: {
     isMobile() {
       return this.$vuetify.breakpoint.mobile

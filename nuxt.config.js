@@ -18,8 +18,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content:
-          'Meet real single Christians of all ages and backgrounds for relationship and/or friendship, and enjoy networking and personal development activities and events all in one place',
+        content: 'Building Relationships, Building People',
       },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'theme-color', content: '#ff47d3' },
@@ -33,8 +32,23 @@ export default {
       },
       { rel: 'manifest', href: '/site.webmanifest' },
       {
+        rel: 'preconnect',
+        href: 'https://cdn.jsdelivr.net',
+        crossorigin: true,
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: true,
+      },
+      {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500;700;900&display=swap',
+      },
+      {
+        rel: 'preload',
+        as: 'font',
+        href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/fonts/materialdesignicons-webfont.woff2?v=6.5.95',
       },
     ],
   },
@@ -52,11 +66,7 @@ export default {
   loading: {
     color: '#FF47D3',
   },
-  loadingIndicator: {
-    name: 'cube-grid',
-    color: '#FF47D3',
-    background: 'white',
-  },
+  loadingIndicator: null,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
