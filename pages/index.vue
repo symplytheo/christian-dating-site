@@ -2,7 +2,7 @@
   <div>
     <v-carousel
       hide-delimiter-background
-      delimiter-icon="mdi-minus"
+      :delimiter-icon="mdiMinus"
       cycle
       height="550"
       :show-arrows="!isMobile"
@@ -216,7 +216,7 @@
         <v-carousel
           hide-delimiter-background
           show-arrows-on-hover
-          delimiter-icon="mdi-minus"
+          :delimiter-icon="mdiMinus"
           :show-arrows="!isMobile"
           height="auto"
           cycle
@@ -258,7 +258,7 @@
                         </div>
                         <div class="absolute position-start" style="top: -30px">
                           <v-icon size="60" color="secondary">
-                            mdi-format-quote-open
+                            {{ mdiFormatQuoteOpen }}
                           </v-icon>
                         </div>
                       </v-card>
@@ -275,9 +275,15 @@
 </template>
 
 <script>
+import { mdiMinus, mdiFormatQuoteOpen } from '@mdi/js'
+
 export default {
   data() {
     return {
+      // icons
+      mdiMinus,
+      mdiFormatQuoteOpen,
+      //
       testimonials: [1, 2, 3, 4, 5, 6],
       features: [
         {

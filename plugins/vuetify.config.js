@@ -20,4 +20,10 @@ const breakpoint = {
   scrollBarWidth: 16,
 }
 
-export default { theme, breakpoint }
+export default {
+  theme,
+  breakpoint,
+  icons: {
+    iconfont: 'mdiSvg',
+  },
+}

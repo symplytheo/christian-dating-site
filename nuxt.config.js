@@ -32,20 +32,10 @@ export default {
       },
       { rel: 'manifest', href: '/site.webmanifest' },
       {
-        rel: 'preconnect',
-        href: 'https://cdn.jsdelivr.net',
-        crossorigin: true,
-      },
-      {
         rel: 'preload',
         as: 'style',
         href: 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500;700;900&display=swap',
         onload: 'this.onload=null;this.rel="stylesheet"',
-      },
-      {
-        rel: 'preload',
-        as: 'font',
-        href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/fonts/materialdesignicons-webfont.woff2?v=6.5.95',
       },
     ],
   },
@@ -90,7 +80,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     optionsPath: '~/plugins/vuetify.config.js',
-    defaultAssets: { font: false },
+    defaultAssets: false,
     treeShake: true,
   },
 
