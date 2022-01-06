@@ -10,7 +10,7 @@
     >
       <v-carousel-item v-for="v in 5" :key="v">
         <v-img
-          :src="`/slides/${v}.${v === 1 ? 'jpg' : 'jpeg'}`"
+          :src="`/slides/${v}.webp`"
           height="100%"
           width="100%"
           :position="v < 5 ? 'center' : 'top'"
@@ -43,9 +43,9 @@
             </v-row>
           </v-sheet>
 
-          <template #placeholder>
+          <!-- <template #placeholder>
             <image-placeholder size="75" />
-          </template>
+          </template> -->
         </v-img>
       </v-carousel-item>
     </v-carousel>
@@ -144,9 +144,9 @@
                 width="100%"
                 height="100%"
               >
-                <template #placeholder>
+                <!-- <template #placeholder>
                   <image-placeholder />
-                </template>
+                </template> -->
               </v-img>
             </v-card>
           </v-col>
@@ -167,7 +167,7 @@
       </v-container>
     </div>
 
-    <v-img src="/bg/2.jpg" height="350" class="fill-width">
+    <v-img src="/bg/2.webp" height="350" class="fill-width">
       <v-sheet
         color="rgba(233, 22, 118, 0.9)"
         class="py-10 text-center"
@@ -197,9 +197,9 @@
         </v-row>
       </v-sheet>
 
-      <template #placeholder>
+      <!-- <template #placeholder>
         <image-placeholder size="50" />
-      </template>
+      </template> -->
     </v-img>
 
     <!-- testimonials -->
