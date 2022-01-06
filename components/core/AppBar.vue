@@ -1,7 +1,9 @@
 <template>
   <v-app-bar app absolute color="white" flat height="80">
     <!-- Logo -->
-    <core-logo />
+    <nuxt-link to="/" aria-label="Home">
+      <core-logo />
+    </nuxt-link>
 
     <template v-if="isLoggedIn">
       <v-text-field
