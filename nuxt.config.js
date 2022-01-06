@@ -32,10 +32,13 @@ export default {
       },
       { rel: 'manifest', href: '/site.webmanifest' },
       {
-        rel: 'preload',
-        as: 'style',
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: true,
+      },
+      {
+        rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500;700;900&display=swap',
-        onload: 'this.onload=null;this.rel="stylesheet"',
       },
     ],
   },
