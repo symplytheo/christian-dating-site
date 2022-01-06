@@ -68,7 +68,11 @@ export default {
   loading: {
     color: '#FF47D3',
   },
-  loadingIndicator: null,
+  loadingIndicator: {
+    name: 'cube-grid',
+    color: '#FF47D3',
+    background: '#0A44BF',
+  },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
