@@ -36,20 +36,22 @@ export default {
         href: 'https://cdn.jsdelivr.net',
         crossorigin: true,
       },
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.gstatic.com',
-        crossorigin: true,
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500;700;900&display=swap',
-      },
+      // {
+      //   rel: 'preconnect',
+      //   href: 'https://fonts.gstatic.com',
+      //   crossorigin: true,
+      // },
       {
         rel: 'preload',
-        as: 'font',
-        href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/fonts/materialdesignicons-webfont.woff2?v=6.5.95',
+        as: 'style',
+        href: 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500;700;900&display=swap',
+        onload: 'this.onload=null;this.rel="stylesheet"',
       },
+      // {
+      //   rel: 'preload',
+      //   as: 'font',
+      //   href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/fonts/materialdesignicons-webfont.woff2?v=6.5.95',
+      // },
     ],
   },
 
