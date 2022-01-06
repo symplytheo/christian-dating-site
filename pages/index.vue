@@ -97,7 +97,7 @@
             color="primary"
             class="mx-1"
           >
-            <img :src="`/images/${el}.png`" />
+            <img :src="`/images/${el}.webp`" />
           </v-avatar>
           <div
             class="
@@ -279,25 +279,25 @@ export default {
           title: 'Romantic one-to-one activity',
           subtitle:
             'Lectus a placerat interdum diam porttitor ultrices. Lectus placerat interdum diam porttitor ultrices.',
-          image: '/images/meetup-1.png',
+          image: '/images/meetup-1.webp',
         },
         {
           title: 'Love Pod',
           subtitle:
             'Lectus a placerat interdum diam porttitor ultrices. Lectus placerat interdum diam porttitor ultrices.',
-          image: '/images/meetup-2.png',
+          image: '/images/meetup-2.webp',
         },
         {
           title: 'Meet Up',
           subtitle:
             'Lectus a placerat interdum diam porttitor ultrices. Lectus placerat interdum diam porttitor ultrices.',
-          image: '/images/meetup-3.png',
+          image: '/images/meetup-3.webp',
         },
         {
           title: 'Video Date',
           subtitle:
             'Lectus a placerat interdum diam porttitor ultrices. Lectus placerat interdum diam porttitor ultrices.',
-          image: '/images/video-call.png',
+          image: '/images/video-call.webp',
         },
       ],
     }
