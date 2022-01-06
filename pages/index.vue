@@ -74,9 +74,9 @@
           order-md="1"
           class="text-center text-md-left"
         >
-          <h4 class="text-subtitle-1 text-sm-h6 font-weight-bold">
+          <div class="text-subtitle-1 text-sm-h6 font-weight-bold">
             Having difficulty searching for a christian date?
-          </h4>
+          </div>
           <p>
             Use our platform to get the perfect match that best suits your
             personality. Our matching algorithm is top notch amongst others.
@@ -97,7 +97,12 @@
             color="primary"
             class="mx-1"
           >
-            <img :src="`/images/${el}.webp`" />
+            <img
+              :src="`/images/${el}.webp`"
+              height="100%"
+              width="100%"
+              alt=""
+            />
           </v-avatar>
           <div
             class="
@@ -169,7 +174,7 @@
 
     <v-img src="/bg/2.webp" height="350" class="fill-width">
       <v-sheet
-        color="rgba(233, 22, 118, 0.9)"
+        color="rgba(233, 22, 118, 0.95)"
         class="py-10 text-center"
         height="100%"
         dark

@@ -3,7 +3,7 @@
     <v-row class="fill-height" justify="center" align="center" no-gutters>
       <v-col cols="11" sm="8" md="6" lg="4">
         <div class="text-center">
-          <nuxt-link to="/">
+          <nuxt-link to="/" aria-label="Logo">
             <core-logo />
           </nuxt-link>
         </div>
