@@ -16,7 +16,7 @@ export default {}
       rgba(233, 22, 118, 0.3),
       rgba(233, 22, 118, 0.3)
     ),
-    url(/bg/1.jpg);
+    url(/bg/1.webp);
   background-blend-mode: 'multiply';
   background-size: 'cover';
   background-position: center;

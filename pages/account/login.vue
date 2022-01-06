@@ -2,9 +2,11 @@
   <v-sheet tile color="transparent" flat height="100vh">
     <v-row class="fill-height" justify="center" align="center" no-gutters>
       <v-col cols="11" sm="8" md="6" lg="4">
-        <nuxt-link to="/">
-          <core-logo class="mx-auto" />
-        </nuxt-link>
+        <div class="text-center">
+          <nuxt-link to="/" aria-label="Logo">
+            <core-logo />
+          </nuxt-link>
+        </div>
         <v-card class="mt-2 py-2" flat>
           <h2 class="subtitle-1 font-weight-bold text-center mb-2">
             Begin your search for a date

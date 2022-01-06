@@ -82,7 +82,7 @@
       <div class="text-center pb-3 pt-5">
         &copy;
         {{ new Date().getFullYear() }}
-        <nuxt-link to="/">
+        <nuxt-link to="/" class="secondary--text">
           <abbr title="Christian Dating &amp; Social Networking"
             >CDSN</abbr
           > </nuxt-link

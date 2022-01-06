@@ -1,5 +1,3 @@
-import '@mdi/font/css/materialdesignicons.css'
-
 const theme = {
   dark: false,
   themes: {
@@ -22,10 +20,4 @@ const breakpoint = {
   scrollBarWidth: 16,
 }
 
-export default {
-  theme,
-  breakpoint,
-  icons: {
-    iconfont: 'mdi', // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
-  },
-}
+export default { theme, breakpoint }
