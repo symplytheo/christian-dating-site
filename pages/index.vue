@@ -122,9 +122,9 @@
 
     <div class="white py-5">
       <v-container>
-        <h4 class="secondary--text text-h5 font-weight-black text-center mb-3">
+        <h3 class="secondary--text text-h5 font-weight-black text-center mb-3">
           What Awaits You
-        </h4>
+        </h3>
         <v-row
           v-for="(item, m) in features"
           :key="m"
@@ -305,6 +305,12 @@ export default {
           image: '/images/video-call.webp',
         },
       ],
+    }
+  },
+  head() {
+    return {
+      titleTemplate: '%s',
+      title: 'Christian Dating and Social Networking',
     }
   },
   computed: {
