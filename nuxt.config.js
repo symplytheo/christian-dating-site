@@ -55,14 +55,16 @@ export default {
   components: true,
 
   // loading
-  loading: {
-    color: '#FF47D3',
-  },
-  loadingIndicator: {
-    name: 'cube-grid',
-    color: '#FF47D3',
-    background: '#0A44BF',
-  },
+  // loading: {
+  //   color: '#FF47D3',
+  // },
+  loading: false,
+  // loadingIndicator: {
+  //   name: 'cube-grid',
+  //   color: '#FF47D3',
+  //   background: '#0A44BF',
+  // },
+  loadingIndicator: false,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [

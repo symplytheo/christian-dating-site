@@ -10,7 +10,7 @@
   >
     <div class="text-right ma-3">
       <v-btn icon large @click="drawer = false">
-        <v-icon>mdi-close</v-icon>
+        <v-icon>{{ mdiClose }}</v-icon>
       </v-btn>
     </div>
 
@@ -39,6 +39,7 @@
 </template>
 
 <script>
+import { mdiClose } from '@mdi/js'
 import { getInitials } from '~/assets/utils'
 
 export default {
@@ -46,6 +47,9 @@ export default {
     value: { type: Boolean, default: false },
     items: { type: Array, default: () => [] },
   },
+  data: () => ({
+    mdiClose,
+  }),
   computed: {
     drawer: {
       get() {
