@@ -135,6 +135,7 @@
       </div>
 
       <v-app-bar-nav-icon
+        aria-label="menu"
         color="primary"
         class="d-inline-flex d-md-none"
         @click.stop="$emit('toggle-drawer')"
