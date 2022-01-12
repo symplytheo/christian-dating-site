@@ -100,7 +100,7 @@
         </template>
 
         <v-list dense>
-          <v-list-item v-for="(item, i) in userMenu" :key="i">
+          <v-list-item v-for="(item, i) in userMenu" :key="i" :to="item.href">
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
           <v-list-item link @click="logOut">
