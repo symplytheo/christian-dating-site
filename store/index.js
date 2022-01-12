@@ -21,6 +21,7 @@ export const state = () => ({
   ],
   users: [
     {
+      id: 1,
       name: 'Meghan',
       profile_pic: '/images/person-1.png',
       age: 24,
@@ -29,6 +30,7 @@ export const state = () => ({
       last_seen: '2 mins ago',
     },
     {
+      id: 2,
       name: 'Promise',
       profile_pic: '/images/person-2.png',
       age: 32,
@@ -36,6 +38,7 @@ export const state = () => ({
       status: 'online',
     },
     {
+      id: 3,
       name: 'Claire',
       profile_pic: '/images/person-3.png',
       age: 24,
@@ -43,6 +46,7 @@ export const state = () => ({
       status: 'online',
     },
     {
+      id: 4,
       name: 'Olivia',
       profile_pic: '/images/person-4.png',
       age: 24,
@@ -54,7 +58,7 @@ export const state = () => ({
   meetups: [
     {
       title: 'Getting to know each other',
-      image: '/images/meetup-1.png',
+      image: '/images/meetup-1.webp',
       type: 'Online',
       date: 'Fri, 3 sept',
       time: '10:00pm WAT',
@@ -63,7 +67,7 @@ export const state = () => ({
     },
     {
       title: 'programmatically starts the loader',
-      image: '/images/meetup-2.png',
+      image: '/images/meetup-2.webp',
       type: 'Online',
       date: 'Mon, 22 Nov',
       time: '6:00pm GMT+1',
@@ -72,7 +76,7 @@ export const state = () => ({
     },
     {
       title: 'Create a custom loading component',
-      image: '/images/meetup-3.png',
+      image: '/images/meetup-3.webp',
       type: 'Online',
       date: 'Sat, 25 Dec',
       time: '12:00pm CAT',
@@ -81,7 +85,7 @@ export const state = () => ({
     },
     {
       title: 'The Nuxt Child component to create parent and child pages',
-      image: '/images/video-call.png',
+      image: '/images/video-call.webp',
       type: 'Online',
       date: 'Sat, 25 Dec',
       time: '8:00am GMT',
