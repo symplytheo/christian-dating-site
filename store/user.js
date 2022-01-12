@@ -4,11 +4,11 @@ export const state = () => ({
   profile: null,
   authenticated: false,
   userMenu: [
-    { title: 'Profile', href: '', icon: '' },
-    { title: 'Bump up', href: '', icon: '' },
-    { title: 'Refer a Friend', href: '', icon: '' },
-    { title: 'Send Feedback', href: '', icon: '' },
-    { title: 'Change Password', href: '', icon: '' },
+    { title: 'Profile', href: '/account/me', icon: '' },
+    { title: 'Bump up', href: '/account/bump-up', icon: '' },
+    { title: 'Refer a Friend', href: '/account/referral', icon: '' },
+    { title: 'Send Feedback', href: '/account/feedback', icon: '' },
+    { title: 'Change Password', href: '/account/change-password', icon: '' },
   ],
 })
 
