@@ -6,7 +6,7 @@
           <h2 class="text-center font-weight-black text-h5 mb-5">Contact Us</h2>
           <div>
             <v-form v-model="isValid">
-              <v-row no-gutters>
+              <v-row no-gutters justify="center">
                 <v-col cols="12">
                   <div class="mb-1">Name</div>
                   <v-text-field
@@ -41,11 +41,11 @@
                     required
                   />
                 </v-col>
-                <v-col cols="12">
+                <v-col cols="12" sm="10" md="8">
                   <v-btn
                     color="primary"
                     block
-                    large
+                    x-large
                     depressed
                     :disabled="!isValid"
                     :loading="loading"
