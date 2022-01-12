@@ -3,7 +3,7 @@
     <v-card tile flat>
       <v-card-title class="px-1 font-weight-bold">
         <v-btn icon class="mr-2" @click="close">
-          <v-icon>mdi-arrow-left</v-icon>
+          <v-icon>{{ mdiArrowLeft }}</v-icon>
         </v-btn>
         Terms and Conditions
       </v-card-title>
@@ -103,7 +103,7 @@
                 </li>
                 <li>
                   You can only use the Website and the Service for your personal
-                  use – commercial use is not permitted.
+                  use - commercial use is not permitted.
                 </li>
               </ol>
             </li>
@@ -143,10 +143,10 @@
                   measure we have put in place is that at least five members
                   must RSVP an event/activity before it is allowed to hold. If
                   disallowed, a message will be sent to the event/activity
-                  organiser and the members who have RSVP’d informing them that
+                  organiser and the members who have RSVP'd informing them that
                   the event/activity has failed to attract the minimum number of
                   participants and therefore should be cancelled. Members will
-                  be able to see other members who have RSVP’d an event to
+                  be able to see other members who have RSVP'd an event to
                   decide whether or not they would like to also attend the
                   event. Members can withdraw their RSVP at any time. No fee is
                   paid to us for Meetup events but organisers are allowed to
@@ -218,7 +218,7 @@
                 </li>
 
                 <li>
-                  Members’ profiles contain photos and information made
+                  Members' profiles contain photos and information made
                   available by those members. You can find more information
                   about the types of personal information that are collected and
                   how this information is made available to other members in our
@@ -564,7 +564,7 @@
                       wholly in English;
                     </li>
                     <li>
-                      to review Christian Dating and Social Networking’s
+                      to review Christian Dating and Social Networking's
                       <nuxt-link to="/safety-advice" @click.native="close"
                         >Safety Advice</nuxt-link
                       >
@@ -698,7 +698,7 @@
                       that any infringement or breach of these declarations or
                       any part of the Terms and Conditions will be investigated,
                       and appropriate legal action taken at Christian Dating and
-                      Social Networking’s sole discretion, including without
+                      Social Networking's sole discretion, including without
                       limitation, civil, criminal, and injunctive redress. If
                       necessary, we will report any such breach to the relevant
                       law enforcement authorities and we will cooperate with
@@ -1147,10 +1147,15 @@
 </template>
 
 <script>
+import { mdiArrowLeft } from '@mdi/js'
+
 export default {
   props: {
     value: { type: Boolean, default: false },
   },
+  data: () => ({
+    mdiArrowLeft,
+  }),
   computed: {
     dialog: {
       get() {

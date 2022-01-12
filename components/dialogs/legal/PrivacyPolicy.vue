@@ -3,7 +3,7 @@
     <v-card tile flat>
       <v-card-title class="font-weight-bold px-1">
         <v-btn icon class="mr-2" @click="close">
-          <v-icon>mdi-arrow-left</v-icon>
+          <v-icon>{{ mdiArrowLeft }}</v-icon>
         </v-btn>
         Privacy Policy
       </v-card-title>
@@ -68,9 +68,9 @@
                 controller in respect of this Website.
               </li>
               <li>
-                We are registered with the Information Commissioner’s Office
+                We are registered with the Information Commissioner's Office
                 (ICO) who regulates how we store and use information about you.
-                To view our registration information, please visit the ICO’s
+                To view our registration information, please visit the ICO's
                 website at
                 <a
                   href="https://ico.org.uk/"
@@ -246,7 +246,7 @@
               </li>
               <li>
                 Your Profile can be seen only by other members of Christian
-                Dating and Social Networking; however, we can’t control who
+                Dating and Social Networking; however, we can't control who
                 registers on the Website and therefore you should be careful
                 about what you choose to share.
               </li>
@@ -432,7 +432,7 @@
           </li>
 
           <li class="font-weight-bold text-subtitle-1 text-sm-h6">
-            Christian Dating and Social Networking Staff’s and Contractors’
+            Christian Dating and Social Networking Staff's and Contractors'
             Access to and Use of Your Personal Information
             <ol class="font-weight-regular subtitle-1">
               <li>
@@ -501,38 +501,38 @@
             <ol class="font-weight-regular subtitle-1">
               <li>
                 You can request to see any personal information we may hold
-                about you other than what’s publicly displayed on your profile.
+                about you other than what's publicly displayed on your profile.
                 We can provide this information but we may charge a reasonable
                 fee to provide the report.
               </li>
               <li>
                 If the personal information we hold about you is inaccurate or
                 incomplete, you are entitled to request to have it rectified at
-                no cost to you. If we’ve shared your personal information with
-                others, we’ll let them know about the rectification where
+                no cost to you. If we've shared your personal information with
+                others, we'll let them know about the rectification where
                 possible. If you ask us, where possible and lawful to do so,
-                we’ll also tell you whom we’ve shared your personal information
+                we'll also tell you whom we've shared your personal information
                 with so that you can contact them directly.
               </li>
               <li>
                 You can request to delete or remove your personal information in
                 some circumstances such as where we have no business, legal or
-                regulatory obligation to keep it. If we’ve shared your personal
-                information with others, we’ll let them know about the erasure
+                regulatory obligation to keep it. If we've shared your personal
+                information with others, we'll let them know about the erasure
                 where possible. If you ask us, where possible and lawful to do
-                so, we’ll also tell you whom we’ve shared your personal
+                so, we'll also tell you whom we've shared your personal
                 information with so that you can contact them directly.
               </li>
               <li>
                 You can request to block or suppress the processing or display
                 of your personal information in certain circumstances such as
                 where you contest the accuracy of that personal information. We
-                may apply the restriction following legal advice. If we’ve
-                shared your personal information with others, we’ll let them
+                may apply the restriction following legal advice. If we've
+                shared your personal information with others, we'll let them
                 know about the restriction where possible. If you ask us, where
-                possible and lawful to do so, we’ll also tell you whom we’ve
+                possible and lawful to do so, we'll also tell you whom we've
                 shared your personal information with so that you can contact
-                them directly. We’ll let you know before we lift any
+                them directly. We'll let you know before we lift any
                 restriction.
               </li>
               <li>
@@ -575,7 +575,7 @@
             <ol class="font-weight-regular subtitle-1">
               <li>
                 If you have a concern about any aspect of our privacy practices,
-                including the way we’ve handled your personal information, you
+                including the way we've handled your personal information, you
                 should in the first instance report through our internal
                 complaints procedure by following this link:
                 <nuxt-link to="/legal#cookie-policy" @click.native="close"
@@ -583,7 +583,7 @@
                 >.
               </li>
               <li>
-                You can also report directly to the Information Commissioner’s
+                You can also report directly to the Information Commissioner's
                 Office (ICO). You can find details about how to do this on the
                 ICO website at
                 <a
@@ -626,10 +626,15 @@
 </template>
 
 <script>
+import { mdiArrowLeft } from '@mdi/js'
+
 export default {
   props: {
     value: { type: Boolean, default: false },
   },
+  data: () => ({
+    mdiArrowLeft,
+  }),
   computed: {
     dialog: {
       get() {

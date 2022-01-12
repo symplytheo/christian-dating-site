@@ -3,7 +3,7 @@
     <v-card tile flat>
       <v-card-title class="px-1 font-weight-bold">
         <v-btn icon class="mr-2" @click="close">
-          <v-icon>mdi-arrow-left</v-icon>
+          <v-icon>{{ mdiArrowLeft }}</v-icon>
         </v-btn>
         Cookie Policy
       </v-card-title>
@@ -57,7 +57,7 @@
                 enable you to move around our site and use its features. These
                 include cookies used to authenticate users during log-in.
                 Without these cookies, services that are necessary for you to be
-                able to use the site such as accessing secure areas can’t be
+                able to use the site such as accessing secure areas can't be
                 provided.
               </dd>
 
@@ -66,9 +66,9 @@
                 These cookies collect information about how people are using our
                 Website, for example which pages are visited the most often, how
                 people are moving from one link to another and if they get error
-                messages from certain pages. These cookies don’t gather
+                messages from certain pages. These cookies don't gather
                 information that identifies you. All information these cookies
-                collect is grouped together with information from other people’s
+                collect is grouped together with information from other people's
                 use of the Website on an anonymous basis. Overall, these cookies
                 provide us with analytical information about how our Website is
                 performing and how we can improve it.
@@ -79,9 +79,9 @@
                 These cookies allow us to remember choices you make and tailor
                 our Website to provide enhanced features and content to you. For
                 example, these cookies can be used to remember your username or
-                location selection, or changes you’ve made to parts of the
+                location selection, or changes you've made to parts of the
                 Website that you can customise. They can also be used to provide
-                services you’ve asked for such as using our messaging or video
+                services you've asked for such as using our messaging or video
                 chat features.
               </dd>
 
@@ -112,14 +112,14 @@
                 Through these tools or applications a social media service
                 provider may set its own cookies on your device. We do not
                 control these cookies and you should check the social media
-                service provider’s website for further details about how they
+                service provider's website for further details about how they
                 use cookies.
               </dd>
 
               <dt class="font-weight-medium">Fraud Prevention Cookies</dt>
               <dd class="ml-3">
                 These cookie files, flash storage tokens, smart phone SDK
-                applications, or other software on the end user’s device contain
+                applications, or other software on the end user's device contain
                 a unique identifier. Subsequently, in transactions between you
                 and us, that identifier is accessed and checked through third
                 party databases to determine if the device has been associated
@@ -243,10 +243,15 @@
 </template>
 
 <script>
+import { mdiArrowLeft } from '@mdi/js'
+
 export default {
   props: {
     value: { type: Boolean, default: false },
   },
+  data: () => ({
+    mdiArrowLeft,
+  }),
   computed: {
     dialog: {
       get() {
