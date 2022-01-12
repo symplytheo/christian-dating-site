@@ -1,10 +1,16 @@
 <template>
   <v-card flat>
-    <v-img :src="user.profile_pic" class="grey lighten-4" height="200">
-      <template #placeholder>
-        <image-placeholder />
-      </template>
-    </v-img>
+    <nuxt-link class="text-decoration-none" :to="`/users/${user.id}`">
+      <v-img
+        :src="user.profile_pic"
+        class="grey lighten-4 rounded-t"
+        height="200"
+      >
+        <template #placeholder>
+          <image-placeholder />
+        </template>
+      </v-img>
+    </nuxt-link>
     <v-card-text class="pa-1 text--primary">
       <div class="d-flex">
         <v-btn text class="font-weight-medium">
