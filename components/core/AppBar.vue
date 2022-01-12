@@ -13,7 +13,7 @@
         hide-details
         class="mx-1 d-none d-sm-block"
         placeholder="Search for someone"
-        append-icon="mdi-magnify"
+        :append-icon="mdiMagnify"
         style="max-width: 400px"
       />
 
@@ -21,12 +21,12 @@
 
       <template v-if="isMobile">
         <v-btn icon color="secondary">
-          <v-icon size="30">mdi-magnify</v-icon>
+          <v-icon size="30">{{ mdiMagnify }}</v-icon>
         </v-btn>
 
         <v-badge offset-x="20" offset-y="20" bordered dot>
           <v-btn to="/account/inbox" icon color="secondary" class="mx-1">
-            <v-icon size="30">mdi-chat-processing-outline</v-icon>
+            <v-icon size="30">{{ mdiChatProcessingOutline }}</v-icon>
           </v-btn>
         </v-badge>
       </template>
@@ -94,7 +94,7 @@
               <v-list-item-title>{{ user.name }}</v-list-item-title>
             </v-list-item-content>
             <v-list-item-icon>
-              <v-icon color="black">mdi-menu-down</v-icon>
+              <v-icon color="black">{{ mdiMenuDown }}</v-icon>
             </v-list-item-icon>
           </v-list-item>
         </template>
@@ -158,6 +158,7 @@
 </template>
 
 <script>
+import { mdiMenuDown, mdiChatProcessingOutline, mdiMagnify } from '@mdi/js'
 import { getInitials } from '~/assets/utils'
 
 export default {
@@ -166,6 +167,11 @@ export default {
     items: { type: Array, default: () => [] },
     tabs: { type: Array, default: () => [] },
   },
+  data: () => ({
+    mdiMenuDown,
+    mdiChatProcessingOutline,
+    mdiMagnify,
+  }),
   computed: {
     isLoggedIn() {
       return this.$store.getters['user/authenticated']

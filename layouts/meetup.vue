@@ -3,9 +3,6 @@
     <core-app-bar extended :tabs="tabs" :items="loggedNav" />
 
     <v-main class="grey lighten-3">
-      <!-- <v-container fluid class="pa-0 ma-0">
-        <nuxt />
-      </v-container> -->
       <v-container fluid>
         <v-row justify="center">
           <v-col cols="12" md="10" lg="11">
@@ -26,7 +23,7 @@
                     large
                     @click="create = true"
                   >
-                    <v-icon left>mdi-plus-circle-outline</v-icon>
+                    <v-icon left>{{ mdiPlusCircleOutline }}</v-icon>
                     New Meetup
                   </v-btn>
                 </v-col>
@@ -78,9 +75,12 @@
 </template>
 
 <script>
+import { mdiPlusCircleOutline } from '@mdi/js'
+
 export default {
   middleware: 'auth',
   data: () => ({
+    mdiPlusCircleOutline,
     tab: null,
     meetupTabs: [
       { title: 'Upcoming', href: '/meetups' },
