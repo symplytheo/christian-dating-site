@@ -7,7 +7,7 @@
     <div class="pa-3">
       <v-form v-model="isValid">
         <v-row no-gutters>
-          <v-col cols="12" class="text-center">
+          <v-col cols="12" class="text-center pb-5">
             <div class="mb-1">Dating Needs</div>
             <v-chip-group v-model="form.need" column>
               <v-row justify="center" class="py-2">
