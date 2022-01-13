@@ -39,6 +39,7 @@
                 large
                 color="secondary"
                 class="mt-2 mt-sm-0"
+                @click="kyc = true"
               >
                 Request Verification
               </v-btn>
@@ -162,6 +163,10 @@
         </v-card>
       </v-col>
     </v-row>
+
+    <!-- dialogs -->
+    <dialogs-upload-kyc-document v-model="kyc" />
+    <!--  -->
   </v-container>
 </template>
 
@@ -190,6 +195,7 @@ import {
 export default {
   data: () => ({
     mdiPencilOutline,
+    kyc: false,
     about: [
       { title: 'Residence', icon: mdiHomeOutline },
       { title: 'Occupation', icon: mdiBriefcaseOutline },
