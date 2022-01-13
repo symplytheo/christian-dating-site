@@ -1,7 +1,7 @@
 <template>
   <v-sheet tile color="transparent" flat height="100vh">
     <v-row class="fill-height" justify="center" align="center" no-gutters>
-      <v-col cols="11" sm="8" md="6" lg="4">
+      <v-col cols="11" sm="8" md="6" lg="5">
         <div class="text-center">
           <nuxt-link to="/" aria-label="Logo">
             <core-logo />
