@@ -10,8 +10,8 @@
       Welcome to Christian Dating & Social Networking!
     </h4>
     <p>
-      You are now part of the world’s fastest growing community of Christian
-      singles. In almost no time, you’ll be connecting with other like-minded
+      You are now part of the world's fastest growing community of Christian
+      singles. In almost no time, you'll be connecting with other like-minded
       Christians. But before that, we need to know you a bit about you!
     </p>
     <v-btn block color="primary" depressed large @click="$emit('submit')">
