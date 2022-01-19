@@ -3,7 +3,6 @@
     <v-carousel
       hide-delimiter-background
       :delimiter-icon="mdiMinus"
-      cycle
       height="550"
       :show-arrows="!isMobile"
       show-arrows-on-hover
